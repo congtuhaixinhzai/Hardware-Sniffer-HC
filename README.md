@@ -1,104 +1,95 @@
-<br/>
 <div align="center">
-  <h3 align="center">Hardware Sniffer</h3>
 
-  <p align="center">
-    It's a crucial component of the <a href="https://github.com/lzhoang2801/OpCore-Simplify">OpCore Simplify</a> project, it plays an essential role in simplifying and automating the process of collecting and analyzing hardware data. The name emphasizes its function of "sniffing out" all relevant hardware details to provide a comprehensive overview of the system's components.
-    <br />
-    <br />
-    <a href="#-features">Features</a> •
-    <a href="#-qa">Q&A</a> •
-    <a href="#-how-to-use">How To Use</a> •
-    <a href="#-contributing">Contributing</a> •
-    <a href="#-license">License</a> •
-    <a href="#-credits">Credits</a> •
-    <a href="#-contact">Contact</a>
-  </p>
-</div>
+# 🔍 Hardware Sniffer
+**The Core Component of OpCore Simplify Project**
 
-> [!NOTE]
-> This project is signed to ensure security and trustworthiness.
-
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#-features">Features</a></li>
-    <li><a href="#-qa">Q&A</a></li>
-    <li><a href="#-how-to-use">How To Use</a></li>
-    <li><a href="#-contributing">Contributing</a></li>
-    <li><a href="#-license">License</a></li>
-    <li><a href="#-credits">Credits</a></li>
-    <li><a href="#-contact">Contact</a></li>
-  </ol>
-</details>
+[![GitHub Stars](https://img.shields.io/github/stars/lzhoang2801/Hardware-Sniffer?style=for-the-badge&color=ffd700)](https://github.com/lzhoang2801/Hardware-Sniffer/stargazers)
+[![License](https://img.shields.io/github/license/lzhoang2801/Hardware-Sniffer?style=for-the-badge&color=007bff)](LICENSE)
+[![Platform](https://img.shields.io/badge/Platform-Windows-0078d7?style=for-the-badge&logo=windows)](https://github.com/lzhoang2801/Hardware-Sniffer)
+[![Status](https://img.shields.io/badge/Security-Signed-success?style=for-the-badge&logo=powershell)](https://github.com/lzhoang2801/Hardware-Sniffer)
 
 ---
 
-## ✨ **Features**
+**Hardware Sniffer** đóng vai trò thiết yếu trong việc đơn giản hóa và tự động hóa quá trình thu thập, phân tích dữ liệu phần cứng. Đúng như cái tên "Sniffer", công cụ này sẽ "đánh hơi" mọi ngóc ngách hệ thống để cung cấp cái nhìn toàn diện nhất cho hành trình Hackintosh của bạn.
 
-- **Comprehensive Hardware Collection**: 
-  - Extracts information about your motherboard, CPU, GPU, monitor, network adapters, audio devices, USB controllers, input devices, storage controllers, biometric sensors, Bluetooth, SD controllers, and system devices using the WMI command-line (WMIC) utility.
-  
-- **Innovative Detection Techniques**:
-  - 📌 **Motherboard Chipset Identification**: Uses PCI Device details for accurate Intel chipset recognition.
-  - 📌 **CPU Codename Recognition**: Identifies the CPU codename through "Family x Model x Stepping x" without querying Intel ARK or AMD websites.
-  - 📌 **GPU Codename Recognition**: Determines the GPU codename using the device ID.
-  - 📌 **Input Device Connection Type**: Identifies input devices (e.g., touchpad, touchscreen) connection type (i2c, PS2, SMBus, USB).
+[✨ Features](#-features) • [❓ Q&A](#-qa) • [🚀 How To Use](#-how-to-use) • [📞 Contact](#-contact)
 
-## ❓ **Q&A**
+</div>
 
-- **Support for macOS and Linux?**
-  - **macOS**: ❌ No. Due to potential inaccuracies caused by Hackintosh modifications, we cannot guarantee accurate information.
-  - **Linux**: 🔄 Work in progress in branch [add-linux-support](https://github.com/lzhoang2801/Hardware-Sniffer/tree/add-linux-support)
+> [!NOTE]
+> Dự án này đã được ký số (Digitally Signed) để đảm bảo tính an toàn và tin cậy cho người dùng.
 
-## 🚀 **How To Use**
+---
 
-1. **Download**: Head to the [Releases](https://github.com/lzhoang2801/Hardware-Sniffer/releases) tab of Hardware Sniffer and download the latest version.
-   
-   ![Releases Tab](https://i.imgur.com/gAoVphx.png)
+## ✨ Features Highlights
 
-2. **Launch**: Run `Hardware-Sniffer.exe`. The information gathering process might take a few moments.
+| | Tính năng | Chi tiết |
+| :--- | :--- | :--- |
+| 📊 | **Dữ liệu Toàn diện** | Trích xuất thông tin Motherboard, CPU, GPU, Network, Audio, USB, Storage, Biometric, Bluetooth thông qua WMIC. |
+| 🧠 | **Nhận diện Chipset** | Sử dụng PCI Device ID để xác định chính xác Chipset Intel/AMD. |
+| 🔢 | **CPU Codename** | Nhận diện Codename thông qua công thức `Family x Model x Stepping` (Không cần Internet/ARK). |
+| 🔌 | **Input Detection** | Tự động phân loại kiểu kết nối của Touchpad/Touchscreen (I2C, PS2, SMBus, USB). |
 
-   ![Hardware Information Collection](https://i.imgur.com/aDB0Wsb.png)
+---
 
-3. **Main Menu**: Once data collection is complete, you’ll reach the main screen with three options:
+## ❓ Q&A
 
-   - **T. Toggle Hardware Report View**: Switch between Short / Full view modes
-   - **H. Export Hardware Report**: Save the report in JSON format
-   - **A. Dump ACPI Tables**: Collect and save ACPI tables
+- **Hỗ trợ macOS và Linux không?**
+  - **macOS**: ❌ Không. Để tránh sai lệch dữ liệu do các bản vá Hackintosh trước đó, chúng tôi chỉ khuyên dùng trên Windows sạch.
+  - **Linux**: 🔄 Đang phát triển tại branch `add-linux-support`.
 
-   ![Hardware Sniffer Main](https://i.imgur.com/P0lP9pI.png)
+---
 
-4. **Use with OpCore Simplify**: Select the two options in order: `Export hardware report` and `Dump ACPI Tables`.
-5. **Results**: Your output will be saved in the `Results` folder in the program's directory.
+## 🚀 How To Use
 
-   ![Results](https://i.imgur.com/gxV4aLL.png)
+### 1️⃣ Download
+Truy cập tab [Releases](https://github.com/lzhoang2801/Hardware-Sniffer/releases) và tải về phiên bản `.exe` mới nhất.
 
-## 🤝 **Contributing**
+### 2️⃣ Khởi chạy
+Chạy `Hardware-Sniffer.exe`. Quá trình "sniffing" có thể mất vài giây tùy vào độ phức tạp của hệ thống.
 
-Contributions are **highly appreciated**! If you have ideas to improve this project, feel free to fork the repo and create a pull request, or open an issue with the "enhancement" tag.
+### 3️⃣ Menu điều khiển
+Sau khi quét xong, bạn có 3 lựa chọn chính:
+* **`T`**: Chế độ xem rút gọn hoặc đầy đủ.
+* **`H`**: Xuất báo cáo ra định dạng **JSON** (Dùng cho OpCore Simplify).
+* **`A`**: Dump bảng **ACPI** trực tiếp từ hệ thống.
 
-Don't forget to ⭐ star the project! Thank you for your support! 🌟
+### 4️⃣ Kết quả
+Mọi tệp tin xuất ra sẽ nằm gọn trong thư mục `Results` tại nơi bạn chạy chương trình.
 
-## 📜 **License**
+---
 
-Distributed under the BSD 3-Clause License. See `LICENSE` for more information.
+## 🤝 Contributing
 
-## 🙌 **Credits**
+Mọi đóng góp cho dự án đều được trân trọng! Nếu bạn có ý tưởng mới, đừng ngần ngại:
+1. **Fork** dự án.
+2. Tạo bản cập nhật.
+3. Mở một **Pull Request** hoặc **Issue** với tag "enhancement".
 
-- **WMI**: [Microsoft WMIC Utility](https://learn.microsoft.com/en-us/windows/win32/wmisdk/wmic) and [Python WMI Module](https://github.com/tjguk/wmi) by tjguk
-- **cpuid.py**: [flababah/cpuid.py](https://github.com/flababah/cpuid.py) - A pure Python library for accessing x86 processor details
-- **pci.ids**: [The PCI ID Repository](https://pci-ids.ucw.cz/)
-- **usb.ids**: [The USB ID Repository](http://www.linux-usb.org/usb.ids)
-- **run.py**: By [CorpNewt](https://github.com/corpnewt) - Manages executing system commands through the `subprocess` module
+---
 
-## 📞 **Contact**
+## 🙌 Credits
 
-**Hoang Hong Quan**
-> Facebook [@macforce2601](https://facebook.com/macforce2601) &nbsp;&middot;&nbsp;
-> Telegram [@lzhoang2601](https://t.me/lzhoang2601) &nbsp;&middot;&nbsp;
-> Email: lzhoang2601@gmail.com
+Dự án sử dụng và kế thừa tinh hoa từ:
+- **WMI**: Microsoft WMIC & Python WMI Module.
+- **cpuid.py**: Thư viện thuần Python truy cập x86 processor details.
+- **PCI/USB ID Repository**: Cơ sở dữ liệu định danh thiết bị toàn cầu.
+- **Subprocess wrapper**: Từ mã nguồn của **CorpNewt**.
 
-## 🌟 **Star History**
+---
+
+## 📞 Contact
+
+<div align="center">
+
+**Congtuhaixinhzai**
+
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/macforce2601)
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/lzhoang2601)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lzhoang2601@gmail.com)
+
+</div>
+
+## 🌟 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=lzhoang2801/Hardware-Sniffer&type=Date)](https://star-history.com/#lzhoang2801/Hardware-Sniffer&Date)
